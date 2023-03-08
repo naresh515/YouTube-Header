@@ -19,7 +19,7 @@ body {
 
 .left_nav {
     display: flex;
-    gap: 20px;
+    gap: 70px;
 }
 
 .youtube {
@@ -50,22 +50,17 @@ span {
     width: 40px;
 }
 
-.toogle span {
-    height: 3px;
-    width: 25px;
-    display: block;
-    background: black;
-    margin-bottom: 5.5px;
-}
-
 #form-search {
-    padding: 10px 250px 10px 20px;
+    padding: 10px 10px 10px 20px;
     border: 3px solid #eaeaea;
     border-radius: 5px;
     background-color: white;
     outline: none;
     margin: 12px 0px;
-    font-size: 15px;
+    font-size: 16px;
+    width: 500px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .search {
@@ -73,10 +68,13 @@ span {
     cursor: pointer;
     border: 3px solid #eaeaea;
     text-align: center;
-    background-color: white;
+    background-color: #dfdfdf;
     color: white;
     padding: 10px 30px;
-    left: -10px;
+    font-size: 16px;
+    left: -2px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .fa-search {
@@ -128,43 +126,101 @@ span {
     font-size: 17px;
 }
 
-.dropdown .dropbtn {
-    border: none;
-    outline: none;
-    color: white;
-    font-size: 20px;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
-
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 100px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    margin-top: 3px;
-}
-
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 4px 16px;
-    text-decoration: none;
+#sidebar {
+    width: 200px;
+    height: 88vh;
     display: block;
+    position: absolute;
+    left: -200px;
+    top: 70px;
     text-align: left;
-    font-size: 20px;
-    width: 100px;
-    margin-top: 7px;
+    transition: left 0.3s linear;
 }
 
-.dropdown-content a:hover {
-    background-color: black;
-    color: white;
+#sidebar.visible {
+    left: 30px;
+    top: 70px;
+    transition: left 0.3s linear;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    color: black;
+    display: block;
+    width: 180px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#sidebar-btn {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    cursor: pointer;
+    margin: 25px;
+    top: 0px;
+    left: 0;
+}
+
+#sidebar-btn span {
+    display: block;
+    height: 3px;
+    width: 25px;
+    background: black;
+    margin-bottom: 5.5px;
+}
+
+#Form {
+    display: flex;
+    align-items: center;
+}
+
+.mic {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    text-align: center;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-color: transparent;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.mic:hover {
+    background-color: #dfdfdf;
+}
+
+.icons23 {
+    color: black;
+    position: absolute;
+    top: 30px;
+    left: 27%;
+    z-index: 1;
+}
+
+.from {
+    position: relative;
+    top: -70px;
+    left: 25%;
+    width: 570px !important;
+    text-indent: 40px;
+    border: 1px solid blue !important;
+}
+
+.form-2 {
+    display: none;
 }
 
 @media screen and (min-width: 320px) and (max-width: 800px) {
@@ -205,11 +261,15 @@ span {
 
     .left_nav {
         position: absolute;
-        left: 15px;
+        left: 65px;
     }
 
     .center_nav {
         position: absolute;
         right: 15px;
+    }
+
+    #sidebar-btn {
+        margin: 15px;
     }
 }

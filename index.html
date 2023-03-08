@@ -15,17 +15,20 @@
         <div class="nav">
             <div class="left_nav">
                 <div class="dropdown">
-                    <div class="toogle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="dropdown-content">
-                        <a href="#">Home</a>
-                        <a href="#">Shorts</a>
-                        <a href="#">Subscription</a>
-                        <a href="#">Library</a>
-                        <a href="#">History</a>
+                    <div id="sidebar">
+                        <ul>
+                            <li> <a href="#">Home</a></li>
+                            <li> <a href="#">Shorts</a></li>
+                            <li> <a href="#">Subscription</a></li>
+                            <li> <a href="#">Library</a></li>
+                            <li> <a href="#">History</a></li>
+                        </ul>
+
+                        <div id="sidebar-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
                 </div>
                 <div class="icon">
@@ -36,21 +39,24 @@
             </div>
             <div class="center_nav">
                 <div id="Form">
-                    <input id="form-search" type="search" placeholder="Zoeken">
+                    <input id="form-search" type="search" placeholder="Search">
                     <button type="button" class="search"><a href="#"><dfn title="search icon"><i
                                     class="fa fa-search"></i></dfn></a></button>
-                    <i class="fa fa-duotone fa-circle-user last_icon"></i>
+                    <i class="fa fa-thin fa-microphone mic"></i>
                 </div>
             </div>
             <div class="right_nav">
                 <div class="icons">
-                    <i class="fa fa-light fa-video icons1"></i>
+                    <i class="fa fa-solid fa-video-plus icons1"></i>
                     <img src="./dot.svg" class="ico_svg">
                     <i class="fa fa-solid fa-bell icons2"></i><button class="top">9+</button>
                     <img src="./img/download.jfif" class="img">
                 </div>
-
             </div>
+        </div>
+        <div class="form-2">
+            <i class="fa fa-search icons23"></i>
+            <input id="form-search" class="from" type="search" placeholder="Search">
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>

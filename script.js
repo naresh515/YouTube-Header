@@ -1,5 +1,8 @@
 $(document).ready(function (e) {
-    $(".toogle").click(function () {
-        $(".dropdown-content").slideToggle();
+    $("#form-search").click(function () {
+        $(".form-2").fadeToggle();
+    })
+    $('#sidebar-btn').click(function () {
+        $('#sidebar').toggleClass('visible');
     });
 });
